@@ -62,20 +62,28 @@ flutter:
     - images/TabBar/user.png
  
     # Index
-    - images/type.png
-    - images/login.png
-    - images/bg.png
-    - images/title.png
-    - images/1.png
-    - images/2.png
-    - images/3.png
-    - images/4.png
-    - images/5.png
-    - images/6.png
-    - images/7.png
-    - images/8.png
-    - images/9.png
-    - images/10.png
+    - images/Index/type.png
+    - images/Index/login.png
+    - images/Index/bg.png
+    - images/Index/title.png
+    - images/Index/1.png
+    - images/Index/2.png
+    - images/Index/3.png
+    - images/Index/4.png
+    - images/Index/5.png
+    - images/Index/6.png
+    - images/Index/7.png
+    - images/Index/8.png
+    - images/Index/9.png
+    - images/Index/10.png
+
+    # 抢购图片
+    - images/Index/shopBuy1.jpg
+    - images/Index/shopBuy2.jpg
+
+    # 秒杀
+    - images/Index/skill1.jpg
+    - images/Index/skill2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

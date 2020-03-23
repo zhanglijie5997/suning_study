@@ -1,7 +1,10 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import '../../Pages/SeachPage/SeachPage.dart';
 import '../../Utils/ScreenutilSetting/ScreenutilSetting.dart';
+import './Components/IndexContainer.dart';
 
 class Index extends StatefulWidget {
   Index({Key key}) : super(key: key);
@@ -11,17 +14,17 @@ class Index extends StatefulWidget {
 }
 
 class _IndexState extends State<Index> {
-  List _iconList = [
-    { 'name': '家乐福', 'id': 0, 'img': Image.asset("images/1.png") },
-    { 'name': '苏宁超市', 'id': 1, 'img': Image.asset("images/2.png") },
-    { 'name': '苏宁拼购', 'id': 2, 'img': Image.asset("images/3.png") },
-    { 'name': '爆款手机', 'id': 3, 'img': Image.asset("images/4.png") },
-    { 'name': '苏宁家电', 'id': 4, 'img': Image.asset("images/5.png") },
-    { 'name': '免费领水果', 'id': 5, 'img': Image.asset("images/6.png") },
-    { 'name': '赚钱消消乐', 'id': 6, 'img': Image.asset("images/7.png") },
-    { 'name': '签到有礼', 'id': 7, 'img': Image.asset("images/8.png") },
-    { 'name': '领取中心', 'id': 8, 'img': Image.asset("images/9.png") },
-    { 'name': '更多频道', 'id': 9, 'img': Image.asset("images/10.png") }
+  List _iconList (BuildContext context) => [
+    { 'name': '家乐福', 'id': 0, 'img': Image.asset("images/Index/1.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '苏宁超市', 'id': 1, 'img': Image.asset("images/Index/2.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '苏宁拼购', 'id': 2, 'img': Image.asset("images/Index/3.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '爆款手机', 'id': 3, 'img': Image.asset("images/Index/4.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '苏宁家电', 'id': 4, 'img': Image.asset("images/Index/5.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '免费领水果', 'id': 5, 'img': Image.asset("images/Index/6.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '赚钱消消乐', 'id': 6, 'img': Image.asset("images/Index/7.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '签到有礼', 'id': 7, 'img': Image.asset("images/Index/8.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '领取中心', 'id': 8, 'img': Image.asset("images/Index/9.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) },
+    { 'name': '更多频道', 'id': 9, 'img': Image.asset("images/Index/10.png", width: ScreentulilSetting.setWidth(context, 100), height: ScreentulilSetting.setHeight(context, 100),) }
   ];
 
   // 顶部
@@ -33,17 +36,17 @@ class _IndexState extends State<Index> {
           // 背景图
           Positioned(
               child: Container(
-                margin: EdgeInsets.only(top: ScreentulilSetting.setWidth(context, 40)),
+                margin: EdgeInsets.only(top: ScreentulilSetting.setWidth(context, 0)),
                 width: MediaQuery.of(context).size.width,
                 height: ScreentulilSetting.setWidth(context, 500),
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("images/bg.png"),fit: BoxFit.cover),
+                  image: DecorationImage(image: AssetImage("images/Index/bg.png"),fit: BoxFit.cover),
                 ),
               )
           ), 
           // 分类和用户中心
           Positioned(
-            top: ScreentulilSetting.setWidth(context, 40),
+            top: ScreentulilSetting.setWidth(context, 60),
             child: Container(
               decoration: BoxDecoration(
                 // image: DecorationImage(image: AssetImage("images/title.png"),fit: BoxFit.cover)
@@ -59,14 +62,14 @@ class _IndexState extends State<Index> {
                     flex: 1,
                     child: Container(
                       margin: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.4),
-                      child: Image.asset("images/type.png", width: ScreentulilSetting.setWidth(context, 36), height: ScreentulilSetting.setWidth(context, 60)),
+                      child: Image.asset("images/Index/type.png", width: ScreentulilSetting.setWidth(context, 36), height: ScreentulilSetting.setWidth(context, 60)),
                     ),
                   ),
                   Expanded(
                     flex: 1,
                     child: Container(
                       margin: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.4),
-                      child: Image.asset("images/login.png", width: ScreentulilSetting.setWidth(context, 36), height: ScreentulilSetting.setWidth(context, 60)),
+                      child: Image.asset("images/Index/login.png", width: ScreentulilSetting.setWidth(context, 36), height: ScreentulilSetting.setWidth(context, 60)),
                     ),
                   )
                 ],
@@ -159,39 +162,117 @@ class _IndexState extends State<Index> {
   );
   
   // 选择icon
-  GridView _iconListBuild() {
+  GridView _iconListBuild(BuildContext context) {
     return GridView.builder(
+      physics: new NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.only(top: ScreentulilSetting.setWidth(context, 30), bottom: 0),
+      shrinkWrap: true,
+      itemCount: _iconList(context).length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 5,
-                        mainAxisSpacing: ScreentulilSetting.setWidth(context, 10),
+                        mainAxisSpacing: ScreentulilSetting.setWidth(context, 0),
                         crossAxisSpacing: ScreentulilSetting.setWidth(context, 10),
                         childAspectRatio: 0.8
                       ), 
       itemBuilder: (BuildContext context, int index) {
         return Column(
           children: <Widget>[
-            Image.asset(_iconList[index]['img']),
-            Text(_iconList[index]['name'])
+            _iconList(context)[index]['img'],
+            Container(
+              margin: EdgeInsets.only(top: ScreentulilSetting.setWidth(context, 10)),
+              child: Text(_iconList(context)[index]['name'])
+            )
           ],
         );
       });
   }
+  
+  // 礼包
+  Container _giftPackage(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: ScreentulilSetting.setHeight(context, 300),
+      padding: EdgeInsets.only(top: 0),
+      child: Flex(
+        direction: Axis.horizontal,
+        children: <Widget>[
+          Expanded(
+            flex: 2,
+            child: Image.network("https://image3.suning.cn/uimg/cms/img/157330223943814123.png")),
+          Expanded(
+            flex: 1,
+            child: Image.network("https://image3.suning.cn/uimg/cms/img/157330224785306243.gif"),
+          ),
+          Expanded(
+            flex: 1,
+            child: Image.network("https://image2.suning.cn/uimg/cms/img/157330227372982455.gif")
+          )
+        ],
+      )
+    );
+  }
+
+  // ListView
+  ListView _listView(BuildContext context) {
+    return ListView(
+      padding: EdgeInsets.only(top: ScreentulilSetting.setWidth(context, 0)),
+      // 关闭滚动，避免与页面滚动冲突
+      physics: new NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: <Widget>[
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+        Text('data'),
+
+      ],
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        child: Container(
-          color: Color.fromRGBO(242, 242, 242, 1),
-          child: Column(
-            children: <Widget>[
-              _titleWidget(context),
-              _ad(context),
-              // _iconListBuild(),
-            ],
-          ),
-        ) 
-      )
+      body: Container(
+        child: Scrollbar(
+          child: NotificationListener<ScrollNotification>(
+            onNotification: (ScrollNotification scroll) {
+              return false;
+            },
+            child: new SingleChildScrollView(
+              //滚动方向，默认是垂直方向
+              scrollDirection: Axis.vertical,
+              //是否使用widget树中默认的PrimaryScrollController
+              primary: true,
+              physics: BouncingScrollPhysics(),
+              child:  Container(
+                color: Color.fromRGBO(242, 242, 242, 1),
+                child: Column(
+                  children: <Widget>[
+                    _titleWidget(context),
+                    _ad(context),
+                    _iconListBuild(context),
+                    Image.network("https://image3.suning.cn/uimg/cms/img/158484556386677916.png?from=mobile", 
+                                   width: MediaQuery.of(context).size.width),
+                    Image.network("https://image3.suning.cn/uimg/cms/img/158469354819855700.png?from=mobile",
+                                  width: MediaQuery.of(context).size.width,
+                                  height: ScreentulilSetting.setHeight(context, 200),),
+                    _giftPackage(context),
+                   // 抢购
+                    IndexContainer(),
+                    // _listView(context)
+                  ],
+                ),
+              ) 
+            )
+          ) 
+        )  
+      ) 
     );
   }
 }

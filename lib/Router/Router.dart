@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/Utils/ScreenutilSetting/ScreenutilSetting.dart';
 import '../Utils/RouterSetting/RouterSetting.dart';
 
 class Router extends StatefulWidget {
@@ -33,10 +34,11 @@ class _RouterState extends State<Router> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RouterSetting.routerList[_current]['page'],
+      body:  RouterSetting.routerList[_current]['page'],
       bottomNavigationBar: BottomNavigationBar(
         items: _bottomNavBar(),
         type: BottomNavigationBarType.fixed,
+        selectedFontSize: ScreentulilSetting.setFontSize(context, 24),
         selectedItemColor: Color.fromRGBO(255, 204, 0, 1),
         currentIndex: _current,
         onTap: (int index) {

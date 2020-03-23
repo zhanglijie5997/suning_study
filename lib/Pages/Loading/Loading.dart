@@ -14,7 +14,7 @@ class _LoadingState extends State<Loading> with SingleTickerProviderStateMixin{
   void initState() {
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 3),
     )..addStatusListener((status)  {
       if(status == AnimationStatus.completed) {
         Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
@@ -28,7 +28,9 @@ class _LoadingState extends State<Loading> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return FadeTransition(
       opacity: _controller,
-      child: Image.asset("images/fight.jpeg"),
+      child: Center(
+        child: Image.asset("images/fight.jpeg", height: MediaQuery.of(context).size.height,),
+      ) 
     );
   }
 }
